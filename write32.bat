@@ -1,8 +1,5 @@
 @echo off
 cls
-Reg.exe add %%i /v "TcpAckFrequency" /d "1" /t REG_DWORD /f
-Reg.exe add %%i /v "TCPNoDelay" /d "1" /t REG_DWORD /f
-Reg.exe add %%i /v "TCPDelAckTicks" /d "0" /t REG_DWORD /f
 netsh int tcp set heuristics disabled
 netsh int tcp set global rss=enabled
 netsh int tcp set global chimney=enabled
